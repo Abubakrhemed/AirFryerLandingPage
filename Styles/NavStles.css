@@ -1,25 +1,44 @@
+/* Base Styles */
+:root {
+    --nav-padding: 20px;
+    --nav-font-size: 1.5rem;
+    --nav-margin-right: 10%; /* Adjust dynamically */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: black;
     color: white;
-    padding-bottom: 10px;
+    padding: var(--nav-padding);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 nav h1 {
     font-family: "Playwrite AU SA", serif;
-    margin-right: 70px;
+    font-size: var(--nav-font-size);
+    margin-right: var(--nav-margin-right);
 }
 
 .navLinks {
     display: flex;
     list-style: none;
-
 }
 
 .navLinks li {
-    margin-right: 30px;
+    margin-right: 20px;
+}
+
+.navLinks li a {
+    color: white;
+    text-decoration: none;
 }
 
 .navLinks li a:hover {
@@ -30,12 +49,68 @@ nav h1 {
 
 nav button {
     background-color: transparent;
-    width: 120px;
-    height: 70px;
+    width: 50px;
+    height: 30px;
     border: none;
+    margin-left: 20px;
+}
+
+nav button:hover {
+    cursor: pointer;
+    width: 60px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
 }
 
 nav button img {
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive Scaling */
+@media screen and (max-width: 1024px) {
+    :root {
+        --nav-padding: 15px;
+        --nav-font-size: 1.2rem;
+        --nav-margin-right: 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --nav-padding: 10px;
+        --nav-font-size: 1rem;
+        --nav-margin-right: 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navLinks {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .navLinks li {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --nav-font-size: 0.9rem;
+    }
+
+    nav h1 {
+        text-align: center;
+        margin: 0;
+    }
+
+    nav button {
+        width: 40px;
+        height: 25px;
+    }
 }

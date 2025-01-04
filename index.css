@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&family=Playwrite+DE+Grund:wght@100..400&display=swap');
+
+/*
+    font-family: "Playwrite AU SA", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+*/
+/*
+  font-family: "Playwrite DE Grund",
+  serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Playwrite DE Grund",serif;
+}
+
+
+body {
+   /* background-color: #f7f9f9;*/
+   background-color: black;
+}
