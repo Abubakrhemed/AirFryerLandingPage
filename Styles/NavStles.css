@@ -1,0 +1,41 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding-bottom: 10px;
+}
+
+nav h1 {
+    font-family: "Playwrite AU SA", serif;
+    margin-right: 70px;
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+
+}
+
+.navLinks li {
+    margin-right: 30px;
+}
+
+.navLinks li a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+nav button {
+    background-color: transparent;
+    width: 120px;
+    height: 70px;
+    border: none;
+}
+
+nav button img {
+    width: 50px;
+    height: 50px;
+}
