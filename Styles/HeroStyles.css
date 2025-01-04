@@ -1,0 +1,76 @@
+.HeroContainer {
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    overflow: hidden;
+}
+
+.HeroContainer .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.HeroContainer .mask img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.HeroContainer .heroContent {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.heroContent h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-family: "Playwrite AU SA", serif;
+}
+
+.heroContent p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin: 0.5rem 0 0 0;
+}
+
+/* Responsive Scaling */
+@media screen and (max-width: 1024px) {
+    .heroContent h1 {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 768px) {
+        .heroContent h1 {
+                font-size: 5rem;
+                font-weight: 600;
+            }
+        
+            .heroContent p {
+                font-size: 2rem;
+                font-weight: 600;
+            }
+}
+
+@media screen and (max-width: 480px) {
+    .heroContent h1 {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    .heroContent p {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}

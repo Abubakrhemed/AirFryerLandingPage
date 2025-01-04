@@ -77,6 +77,8 @@ nav button img,
     top: 0;
     left: 0;
     transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
     height: 100%;
     width: 100%;
     background-color: rgba(8, 8, 8, 0.9);
@@ -86,11 +88,13 @@ nav button img,
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: transform 1s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.slideNav.active {
+#slideNav.active {
     transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
 }
 
 #NavBtn {
@@ -209,7 +213,7 @@ nav button img,
 
 @media screen and (max-width: 480px) {
     :root {
-        --nav-font-size: 0.9rem;
+        --nav-font-size: 1rem;
     }
 
     nav h1 {
