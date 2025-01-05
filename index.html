@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./Styles/NavStles.css" />
   <link rel="stylesheet" href="./Styles/HeroStyles.css" />
   <link rel="stylesheet" href="./Styles/AboutStyles.css" />
-    <link rel="stylesheet" href="./Styles/testimonialsStyles.css" />
+  <link rel="stylesheet" href="./Styles/testimonialsStyles.css" />
   <link rel="stylesheet" href="./Styles/CtaStyles.css" />
   <link rel="stylesheet" href="./Styles/FooterStyles.css" />
 </head>
@@ -18,20 +18,24 @@
   <div class="slideNav" id="slideNav">
     <h1>Crispify</h1>
     <ul class="navLinks">
-      <li><a>Home</a></li>
-      <li><a>About</a></li>
-      <li><a>Reviews</a></li>
-      <li><a>Contact Us</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contactus">Contact Us</a></li>
     </ul>
-
+    <button id="slideBtn">
+      <img src="./Assets/CloseIcon.png" />
+    </button>
   </div>
-  <nav>
+
+  <nav id="home">
     <h1>Crispify</h1>
+
     <ul class="navLinks">
-      <li><a>Home</a></li>
-      <li><a>About</a></li>
-      <li><a>Reviews</a></li>
-      <li><a>Contact Us</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contactus">Contact Us</a></li>
     </ul>
     <button id="NavBtn">
       <img src="./Assets/hamburgerIcon.png" />
@@ -43,7 +47,7 @@
       <img src="./Assets/heroImg.jpg" />
     </div>
     <div class="heroContent">
-      <h1> Crispify</h1>
+      <h1 id="home"> Crispify</h1>
       <p>Where Flavor Meets the Perfect Crunch!</p>
     </div>
   </div>
@@ -51,7 +55,7 @@
 
   <div class="ProductInfoContainer">
     <div class="left">
-      <h1>About Our Product</h1>
+      <h1 id="about">About Our Product</h1>
       <p>Crispify is the ultimate air fryer designed to make every meal healthier, tastier, and more convenient!</p>
       <ul>
         <li>✔️ Rapid Air Circulation for Perfectly Even Cooking</li>
@@ -70,19 +74,39 @@
 
   <div class="testimonialsContainer">
     <div class="left2">
-      <h1>Testimonials</h1>
-      <img src="./Assets/aboutImg.jpg" />
+      <h1 id="reviews">Testimonials</h1>
+      <img src="./Assets/reviewImg.png" />
     </div>
     <div class="right2">
-      <p>"A sequence diagram visually represents the flow of messages between objects in a system to accomplish a task. It shows
-      the sequence of interactions over time, focusing on the order and dependencies of events. Sequence diagrams are
-      particularly useful for understanding the dynamic behavior in a system and ensuring that each component interacts
-      correctly to meet system requirements." - a chef
+      <p>"A sequence diagram visually represents the flow of messages between objects in a system to
+        accomplish a task. It shows
+        the sequence of interactions over time, focusing on the order and dependencies of events. Sequence diagrams are
+        particularly useful for understanding the dynamic behavior in a system and ensuring that each component
+        interacts
+        correctly to meet system requirements." - a chef
       </p>
     </div>
   </div>
-  <div class="CtaContainer"></div>
-  <footer></footer>
+  <div class="CtaContainer">
+    <div class="left3">
+      <h1 id="contactus">Contact Us</h1>
+      <p>We Love to hear from our customers !!</p>
+    </div>
+    <div class="right3">
+      <form>
+        <input required type="email" placeholder="Enter Email">
+        <input required type="text" placeholder="Enter Subject">
+        <input required type="text" placeholder="Type">
+        <button>Submit</button>
+      </form>
+    </div>
+  </div>
+  <footer>
+    <p>Crispify @copyright All rights reserved </p>
+    <p>Follow us</p>
+    <p><a href="" to="_blank">Linkdin</a></p>
+    <p><a href="" to="_blank">Github</a></p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

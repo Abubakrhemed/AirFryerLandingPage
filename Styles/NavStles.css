@@ -48,8 +48,8 @@ nav h1,
     transition: 0.3s;
 }
 
-nav button,
-.slideNav button {
+#NavBtn,
+#slideBtn {
     background-color: transparent;
     width: 50px;
     height: 30px;
@@ -57,8 +57,8 @@ nav button,
     margin-left: 20px;
 }
 
-nav button:hover,
-.slideNav button:hover {
+#NavBtn:hover,
+#slideBtn:hover {
     cursor: pointer;
     width: 60px;
     height: 40px;
@@ -66,8 +66,8 @@ nav button:hover,
     transition: 0.3s;
 }
 
-nav button img,
-.slideNav button img {
+#NavBtn img,
+#slideBtn img {
     width: 100%;
     height: auto;
 }
@@ -88,7 +88,7 @@ nav button img,
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.3s ease, opacity 0.5s ease;
 }
 
 #slideNav.active {
@@ -105,7 +105,8 @@ nav button img,
     z-index: 1100;
 }
 
-#NavBtn img {
+#NavBtn img,
+#slideBtn img {
     width: 30px;
     height: 30px;
 }
@@ -130,9 +131,9 @@ nav button img,
 
 .slideNav h1 {
     position: absolute;
-    top: 20px;
+    top: 0px;
     left: 20px;
-    font-size: 2rem;
+    font-size: 1.3rem;
     color: white;
     margin: 0;
 }
@@ -162,9 +163,8 @@ nav button img,
 }
 
 .slideNav button {
-    
     position: absolute;
-    top: 20px;
+    top: 4px;
     right: 20px;
     background-color: transparent;
     width: 50px;
@@ -172,18 +172,7 @@ nav button img,
     border: none;
 }
 
-.slideNav button:hover {
-    cursor: pointer;
-    width: 60px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    transition: 0.3s;
-}
 
-.slideNav button img {
-    width: 100%;
-    height: auto;
-}
 
 
 /* Responsive Scaling */
@@ -201,11 +190,18 @@ nav button img,
         --nav-font-size: 1rem;
         --nav-margin-right: 5%;
     }
-    
+
     .navLinks {
         margin: 10px 0;
     }
 
+    #NavBtn {
+        display: block;
+    }
+        nav .navLinks {
+            display: none;
+    
+        }
     .navLinks li {
         margin-bottom: 10px;
     }
@@ -221,13 +217,6 @@ nav button img,
         margin: 0;
     }
 
-    nav .navLinks {
-        display: none;
-
-    }
-    #NavBtn{
-        display: block;
-    }
     nav button {
         width: 40px;
         height: 25px;
