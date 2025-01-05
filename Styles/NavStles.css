@@ -8,9 +8,13 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,6 +23,9 @@ nav {
     padding: var(--nav-padding);
     width: 100%;
     box-sizing: border-box;
+    z-index: 1000;
+    height: 60px;
+ 
 }
 
 nav h1,
