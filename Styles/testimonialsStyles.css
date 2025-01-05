@@ -25,14 +25,16 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.left2 img{ 
-    width: 100%;
+.left2 img {
+    width: 400px;
     height: 400px;
+    margin-left: 150px;
     border-radius: 8px;
 }
+
 /* For all devices under 1024px */
 @media screen and (max-width: 1024px) {
-    .testimonialsContainer{
+    .testimonialsContainer {
         grid-template-columns: repeat(1, 1fr);
         gap: 15px;
         height: auto;
@@ -54,8 +56,10 @@
     }
 
     .left2 img {
-        width: 100%;
-        height: auto;
+        width: 600px;
+        height: 600px;
+        margin-left: 15%;
+        border-radius: 8px;
     }
 }
 
@@ -70,9 +74,10 @@
     }
 
     .left2 img {
-        width: 90%;
-        margin: 0 auto;
-        display: block;
+        width: 500px;
+        height: 500px;
+        margin-left: 10%;
+        border-radius: 8px;
     }
 }
 
@@ -92,8 +97,10 @@
     }
 
     .left2 img {
-        width: 100%;
-        height: auto;
+        width: 250px;
+        height: 250px;
+        margin-left: 10%;
+        border-radius: 8px;
     }
 
     .left2,
