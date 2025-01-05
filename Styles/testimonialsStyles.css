@@ -1,64 +1,59 @@
-.ProductInfoContainer {
-    background-color: #f7f9f9;
+.testimonialsContainer {
+    background-color: rgba(0, 0, 0, 0.09);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    height: 70vh;
+    height: 80vh;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     /* Two items per row by default */
     gap: 20px;
+    align-items: center;
     padding: 20px;
     box-sizing: border-box;
 }
 
-.left h1 {
+.left2 h1 {
     font-family: "Playwrite AU SA", serif;
 }
 
-.left,
-.right {
-    background-color: rgba(0, 0, 0, 0.2);
+.left2,
+.right2 {
+    background-color: rgb(244, 242, 242);
     border-radius: 8px;
     padding: 20px;
-    color: #333;
+    color: #000000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.right img {
+
+.left2 img{ 
     width: 100%;
     height: 400px;
     border-radius: 8px;
 }
-.left ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
 /* For all devices under 1024px */
 @media screen and (max-width: 1024px) {
-    .ProductInfoContainer {
+    .testimonialsContainer{
         grid-template-columns: repeat(1, 1fr);
         gap: 15px;
         height: auto;
         padding: 15px;
     }
 
-    .left,
-    .right {
+    .left2,
+    .right2 {
         padding: 15px;
         width: 100%;
     }
 
-    .left h1 {
+    .left2 h1 {
         font-size: 2.5rem;
     }
 
-    .left p,
-    .left ul {
+    .right2 p {
         font-size: 1.2rem;
     }
 
-    .right img {
+    .left2 img {
         width: 100%;
         height: auto;
     }
@@ -66,16 +61,15 @@
 
 /* For devices under 768px (smaller tablets and large phones) */
 @media screen and (max-width: 768px) {
-    .left h1 {
+    .left2 h1 {
         font-size: 2rem;
     }
 
-    .left p,
-    .left ul {
+    .right2 p {
         font-size: 1rem;
     }
 
-    .right img {
+    .left2 img {
         width: 90%;
         margin: 0 auto;
         display: block;
@@ -84,27 +78,26 @@
 
 /* For devices under 480px (small phones) */
 @media screen and (max-width: 480px) {
-    .ProductInfoContainer {
+    .testimonialsContainer {
         padding: 10px;
         gap: 10px;
     }
 
-    .left h1 {
+    .left2 h1 {
         font-size: 1.5rem;
     }
 
-    .left p,
-    .left ul {
+    .right2 p {
         font-size: 0.9rem;
     }
 
-    .right img {
+    .left2 img {
         width: 100%;
         height: auto;
     }
 
-    .left,
-    .right {
+    .left2,
+    .right2 {
         padding: 10px;
     }
 }
