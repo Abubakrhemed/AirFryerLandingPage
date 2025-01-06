@@ -17,8 +17,8 @@ nav {
     left: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     background-color: black;
+    align-items: center;
     color: white;
     padding: var(--nav-padding);
     width: 100%;
@@ -80,22 +80,19 @@ nav h1,
 }
 
 #slideNav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translateX(-100%);
-    opacity: 0;
-    visibility: hidden;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(8, 8, 8, 0.9);
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, opacity 0.5s ease;
+       position:fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(8, 8, 8, 0.9);
+        z-index: 1000;
+        display: flex;
+        visibility: hidden;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 #slideNav.active {
@@ -137,12 +134,13 @@ nav h1,
 }
 
 .slideNav h1 {
-    position: absolute;
-    top: 0px;
+position: absolute;
+    top: 20px;
     left: 20px;
     font-size: 1.3rem;
     color: white;
     margin: 0;
+    z-index: 1000;
 }
 
 .slideNav ul {
@@ -170,18 +168,24 @@ nav h1,
 }
 
 .slideNav button {
-    position: absolute;
-    top: 4px;
+   position: absolute;
+    top: 23px;
+    /* Adjust to ensure visibility */
     right: 20px;
     background-color: transparent;
-    width: 50px;
+    width: 30px;
     height: 30px;
     border: none;
+    z-index: 1100;
+    /* Ensure it's above everything */
 }
 
 
-
-
+#slideBtn img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
 /* Responsive Scaling */
 @media screen and (max-width: 1024px) {
     :root {
@@ -191,7 +195,7 @@ nav h1,
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
     :root {
         --nav-padding: 10px;
         --nav-font-size: 1rem;

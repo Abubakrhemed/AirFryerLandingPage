@@ -2,39 +2,44 @@ const NavBtn = document.querySelector("#NavBtn");
 const slideNav = document.querySelector("#slideNav");
 const sldieBtn = document.querySelector("#slideBtn");
 const navLinks = document.querySelectorAll(".slideNav .navLinks a");
-let isMenuOpen = false;
+const navbar = document.querySelector("#nav");
 
-//monitor when nav button is clicked
+let isMenuOpen = false;
+navbar.style.visibility = "visible";
+
 function navBtn() {
     NavBtn.addEventListener("click", () => {
-        console.log("navbtn events started ");
+        console.log("navbtn events started ")
         if (isMenuOpen) {
             slideNav.classList.remove("active");
             NavBtn.querySelector("img").src = "./Assets/hamburgerIcon.png";
             isMenuOpen = false;
         } else {
             slideNav.classList.add("active");
-            NavBtn.style.visibility = "hidden";
+            NavBtn.style.visibility = "hidden"
             isMenuOpen = true;
+            navbar.style.visibility = "hidden"
             slidebtn();
         }
     });
 }
 
-// monitor when slide btn is clicked
 function slidebtn() {
     sldieBtn.addEventListener("click", () => {
-        NavBtn.style.visibility = "visible";
+        NavBtn.style.visibility = "Visible"
         slideNav.classList.remove("active");
+        navbar.style.visibility = "visible"
         isMenuOpen = false;
     });
 }
+
 
 // Close the slide menu when any <a> tag is clicked
 navLinks.forEach(link => {
     link.addEventListener("click", () => {
         slideNav.classList.remove("active");
         NavBtn.style.visibility = "visible";
+        navbar.style.visibility = "visible";
         isMenuOpen = false;
     });
 });
